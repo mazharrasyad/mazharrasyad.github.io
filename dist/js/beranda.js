@@ -86,32 +86,6 @@ $(function () {
         options: pelatihanOptions
     })
 
-    // Sertifikasi Chart
-    var sertifikasiChartCanvas = $('#sertifikasiChart').get(0).getContext('2d')
-    var sertifikasiData = {
-        labels: [
-            'Pass',
-            'Fail',
-        ],
-        datasets: [
-            {
-                data: [4, 1],
-                backgroundColor: ['#007bff', '#343a40'],
-            }
-        ]
-    }
-
-    var sertifikasiOptions = {
-        maintainAspectRatio: false,
-        responsive: true,
-    }
-
-    new Chart(sertifikasiChartCanvas, {
-        type: 'pie',
-        data: sertifikasiData,
-        options: sertifikasiOptions
-    })
-
     // Proyek Chart
     var proyekChartCanvas = $('#proyekChart').get(0).getContext('2d')
     var proyekChartData = $.extend(true, {}, {
@@ -172,33 +146,5 @@ $(function () {
         type: 'bar',
         data: proyekChartData,
         options: proyekChartOptions
-    })
-
-    // Perlombaan Chart
-    var perlombaanChartCanvas = $('#perlombaanChart').get(0).getContext('2d')
-    var perlombaanData = {
-        labels: [
-            'Juara 1',
-            'Juara 2',
-            'Juara 3',
-            'Partisipasi'
-        ],
-        datasets: [
-            {
-                data: [3, 3, 3, 11],
-                backgroundColor: ['#28a745', '#17a2b8', '#dc3545', '#6c757d'],
-            }
-        ]
-    }
-
-    var perlombaanOptions = {
-        maintainAspectRatio: false,
-        responsive: true,
-    }
-
-    new Chart(perlombaanChartCanvas, {
-        type: 'pie',
-        data: perlombaanData,
-        options: perlombaanOptions
     })
 })
