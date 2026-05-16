@@ -1,284 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Proyek - Muhammad Azhar Rasyad - Portfolio</title>
+  <title>Proyek - Muhammad Azhar Rasyad</title>
 
-  <!-- Favicon -->
   <link rel="shortcut icon" href="dist/img/AzharLogoFlag.png" type="image/x-icon">
   <link rel="icon" href="dist/img/AzharLogoFlag.png" type="image/x-icon">
 
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-  <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%); }
+    .card-glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
+    .link-btn { display: flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 12px; font-size: 0.875rem; font-weight: 600; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1); color: #e2e8f0; text-decoration: none; transition: all 0.2s ease; }
+    .link-btn:hover { background: rgba(255, 255, 255, 0.12); transform: translateY(-1px); color: #fff; }
+    .year-link { transition: all 0.2s ease; }
+    .year-link:hover { background: rgba(59, 130, 246, 0.2); border-color: rgba(59, 130, 246, 0.4); color: #fff; }
+  </style>
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed">
-  <div class="wrapper">
+<body class="gradient-bg min-h-screen text-white flex flex-col p-4 md:p-8">
 
-    <!-- Preloader -->
-    <div class="preloader flex-column justify-content-center align-items-center">
-      <img class="animation__shake" src="dist/img/AzharLogo.png" alt="AzharLogo" height="60" width="60">
+  <header class="max-w-4xl mx-auto w-full mb-10 flex justify-between items-center">
+    <a href="index.html" class="link-btn">
+      <i class="fas fa-arrow-left"></i> <span>Kembali</span>
+    </a>
+    <h1 class="text-2xl font-extrabold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+      Arsip Proyek
+    </h1>
+  </header>
+
+  <main class="max-w-4xl mx-auto w-full flex-1">
+    
+    <!-- Hero/Chart Section -->
+    <div class="card-glass rounded-3xl p-8 mb-10">
+      <div class="flex flex-col items-center text-center mb-8">
+        <p class="text-xs text-slate-500 uppercase tracking-widest mb-2">Statistik Kontribusi</p>
+        <h2 class="text-xl font-bold mb-4">Perjalanan Pengembangan</h2>
+      </div>
+      <div class="w-full h-[300px]">
+        <canvas id="proyekChart"></canvas>
+      </div>
     </div>
 
-    <!-- Navbar -->
-    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-      <!-- Left navbar links -->
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-        </li>
-      </ul>
-
-      <!-- Right navbar links -->
-      <ul class="navbar-nav ml-auto">
-
-        <li class="nav-item mr-2">
-          <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-            Full Screen
-            <i class="fas fa-expand-arrows-alt ml-2"></i>
-          </a>
-        </li>
-      </ul>
-    </nav>
-
-    <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-dark-primary elevation-4">
-      <a href="#" class="brand-link">
-        <img src="dist/img/AzharLogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-          style="opacity: .8">
-        <span class="brand-text font-weight-light">Muh. Azhar Rasyad</span>
-      </a>
-
-      <!-- Sidebar -->
-      <div class="sidebar">
-        <nav class="mt-2">
-          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-
-            <li class="nav-item">
-              <a href="index.html" class="nav-link">
-                <i class="nav-icon fas fa-chart-pie"></i>
-                <p>
-                  Beranda                  
-                </p>
-              </a>
-            </li>            
-
-            <li class="nav-item">
-              <a href="pendidikan.html" class="nav-link">
-                <i class="nav-icon fas fa-user-graduate"></i>
-                <p>
-                  Pendidikan                  
-                </p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="pelatihan.html" class="nav-link">
-                <i class="nav-icon fas fa-book"></i>
-                <p>
-                  Pelatihan                  
-                </p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="pengalaman.html" class="nav-link">
-                <i class="nav-icon fas fa-file-contract"></i>
-                <p>
-                  Pengalaman Kerja                  
-                </p>
-              </a>
-            </li>                        
-
-            <li class="nav-item">
-              <a href="proyek.html" class="nav-link active">
-                <i class="nav-icon fas fa-briefcase"></i>
-                <p>
-                  Proyek                  
-                </p>
-              </a>
-            </li>
-
-          </ul>
-        </nav>
+    <!-- Year Grid -->
+    <div class="mb-10 text-center">
+      <p class="text-xs text-slate-500 uppercase tracking-widest mb-6">Pilih Tahun Proyek</p>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <a href="proyek-2025.html" class="year-link p-4 rounded-2xl bg-white/5 border border-white/10 text-slate-400 font-bold text-lg hover:text-blue-400 transition-all">2025</a>
+        <a href="proyek-2024.html" class="year-link p-4 rounded-2xl bg-white/5 border border-white/10 text-slate-400 font-bold text-lg hover:text-blue-400 transition-all">2024</a>
+        <a href="proyek-2023.html" class="year-link p-4 rounded-2xl bg-white/5 border border-white/10 text-slate-400 font-bold text-lg hover:text-blue-400 transition-all">2023</a>
+        <a href="proyek-2022.html" class="year-link p-4 rounded-2xl bg-white/5 border border-white/10 text-slate-400 font-bold text-lg hover:text-blue-400 transition-all">2022</a>
+        <a href="proyek-2021.html" class="year-link p-4 rounded-2xl bg-white/5 border border-white/10 text-slate-400 font-bold text-lg hover:text-blue-400 transition-all">2021</a>
+        <a href="proyek-2020.html" class="year-link p-4 rounded-2xl bg-white/5 border border-white/10 text-slate-400 font-bold text-lg hover:text-blue-400 transition-all">2020</a>
+        <a href="proyek-2019.html" class="year-link p-4 rounded-2xl bg-white/5 border border-white/10 text-slate-400 font-bold text-lg hover:text-blue-400 transition-all">2019</a>
+        <a href="proyek-2018.html" class="year-link p-4 rounded-2xl bg-white/5 border border-white/10 text-slate-400 font-bold text-lg hover:text-blue-400 transition-all">2018</a>
       </div>
-    </aside>
-
-    <!-- Judul -->
-    <div class="content-wrapper">
-      <div class="content-header">
-        <div class="container-fluid">
-          <div class="row mb-2">
-            <div class="col-sm-12">
-              <h1 class="m-0">Proyek [Bidang Teknologi Informasi]</h1>                            
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Main content -->
-      <section class="content">
-        <div class="container-fluid">
-          <div class="row">
-
-            <div class="col-md-12">
-              <div class="card card-maroon card-outline card-outline-tabs">
-                <!-- Tahun Proyek -->
-                <div class="card-header p-0 border-bottom-0">
-                  <ul class="nav nav-tabs" id="custom-tabs-four-tab" role="tablist">
-                    <li class="nav-item">
-                      <a class="nav-link" id="proyek-2025-tab" href="proyek-2025.html">2025</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" id="proyek-2024-tab" href="proyek-2024.html">2024</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" id="proyek-2023-tab" href="proyek-2023.html">2023</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" id="proyek-2022-tab" href="proyek-2022.html">2022</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" id="proyek-2021-tab" href="proyek-2021.html">2021</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" id="proyek-2020-tab" href="proyek-2020.html">2020</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" id="proyek-2019-tab" href="proyek-2019.html">2019</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" id="proyek-2018-tab" href="proyek-2018.html">2018</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="card-body">
-                  <div class="tab-content" id="custom-tabs-four-tabContent">                                        
-                    Pilih Tahun Proyek
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-12">
-              <div class="card card-maroon">
-                <div class="card-header">
-                  <h3 class="card-title">Diagram</h3>
-
-                  <div class="card-tools">                    
-                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                      <i class="fas fa-minus"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <canvas id="proyekChart"
-                    style="min-height: 300px; height: 300px; max-height: 300px; max-width: 100%;"></canvas>
-                </div>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-      </section>
     </div>
 
-    <footer class="main-footer">
-      <strong>Hak Cipta &copy; <a href="https://adminlte.io">AdminLTE.io</a> & Muhammad Azhar Rasyad</strong>
-      <div class="float-right d-none d-sm-inline-block">
-        <b>Versi</b> 1.0
+    <!-- Quick Info -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="card-glass rounded-2xl p-6">
+        <h3 class="text-sm font-bold text-blue-400 uppercase mb-3">Fokus Utama</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Arsip ini mencakup pengembangan Web (Frontend & Backend), Aplikasi Android, serta proyek Data Science yang telah saya kerjakan dari awal karir saya.
+        </p>
       </div>
-    </footer>
+      <div class="card-glass rounded-2xl p-6">
+        <h3 class="text-sm font-bold text-indigo-400 uppercase mb-3">Teknologi Terkini</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Saat ini saya aktif menggunakan Tailwind CSS, Laravel, dan Node.js untuk membangun solusi web yang modern dan scalable.
+        </p>
+      </div>
+    </div>
+  </main>
 
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-    </aside>
-  </div>
+  <footer class="text-center py-10 mt-10">
+    <p class="text-slate-600 text-xs">&copy; 2026 Muhammad Azhar Rasyad</p>
+  </footer>
 
-  <!-- jQuery -->
-  <script src="plugins/jquery/jquery.min.js"></script>
-  <!-- Bootstrap -->
-  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- overlayScrollbars -->
-  <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-  <!-- AdminLTE App -->
-  <script src="dist/js/adminlte.js"></script>
-  <!-- ChartJS -->
-  <script src="plugins/chart.js/Chart.min.js"></script>
   <script>
-    $(function () {      
-      // Proyek Chart
-      var proyekChartCanvas = $('#proyekChart').get(0).getContext('2d')
-      var proyekChartData = $.extend(true, {}, {
-          labels: ['2025', '2024', '2023', '2022', '2021', '2020', '2019', '2018'],
-          datasets: [
-              {
-                  label: 'Programming',
-                  backgroundColor: '#adb5bd',
-                  data: [0, 0, 0, 1, 1, 1, 4, 2] // 9
-              },
-              {
-                  label: 'Web Development',
-                  backgroundColor: '#001f3f',
-                  data: [3, 32, 5, 17, 3, 1, 8, 4] // 33 + 5 + 32 + 3
-              },
-              {
-                  label: 'Android Development',
-                  backgroundColor: '#28a745',
-                  data: [0, 0, 0, 0, 6, 1, 0, 0] // 7
-              },
-              {
-                  label: 'Cloud',
-                  backgroundColor: '#007bff',
-                  data: [0, 0, 0, 0, 0, 0, 0, 0] // 0
-              },
-              {
-                  label: 'Data',
-                  backgroundColor: '#f012be',
-                  data: [0, 0, 0, 0, 2, 4, 4, 1] // 11
-              },
-              {
-                  label: 'UI/UX Design',
-                  backgroundColor: '#605ca8',
-                  data: [0, 0, 0, 0, 0, 1, 3, 0] // 4
-              },
-              {
-                  label: 'Soft Skill',
-                  backgroundColor: '#3d9970',
-                  data: [0, 0, 0, 0, 0, 0, 0, 0] // 0
-              },
-          ]
-      })
-
-      var proyekChartOptions = {
-          responsive: true,
-          maintainAspectRatio: false,
-          scales: {
-              xAxes: [{
-                  stacked: true,
-              }],
-              yAxes: [{
-                  stacked: true
-              }]
+    const ctx = document.getElementById('proyekChart').getContext('2d');
+    
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+        datasets: [
+          {
+            label: 'Web Dev',
+            data: [4, 8, 1, 3, 17, 5, 32, 3],
+            backgroundColor: 'rgba(59, 130, 246, 0.6)',
+            borderRadius: 6
+          },
+          {
+            label: 'Android',
+            data: [0, 0, 1, 6, 0, 0, 0, 0],
+            backgroundColor: 'rgba(16, 185, 129, 0.6)',
+            borderRadius: 6
+          },
+          {
+            label: 'Programming',
+            data: [2, 4, 1, 1, 1, 0, 0, 0],
+            backgroundColor: 'rgba(148, 163, 184, 0.6)',
+            borderRadius: 6
           }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            stacked: true,
+            grid: { display: false },
+            ticks: { color: 'rgba(255,255,255,0.5)' }
+          },
+          y: {
+            stacked: true,
+            grid: { color: 'rgba(255,255,255,0.05)' },
+            ticks: { color: 'rgba(255,255,255,0.5)' }
+          }
+        },
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: { color: 'rgba(255,255,255,0.7)', font: { size: 10 }, usePointStyle: true, padding: 20 }
+          },
+          tooltip: {
+            backgroundColor: 'rgba(15, 23, 42, 0.9)',
+            titleColor: '#fff',
+            padding: 12,
+            cornerRadius: 12
+          }
+        }
       }
-
-      new Chart(proyekChartCanvas, {
-          type: 'bar',
-          data: proyekChartData,
-          options: proyekChartOptions
-      })
-    })
+    });
   </script>
-</body>
 
+</body>
 </html>
