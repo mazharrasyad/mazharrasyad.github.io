@@ -23,12 +23,10 @@
   <style>
     body { font-family: 'Inter', sans-serif; }
     .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%); }
-    .card-glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
+    .card-glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.3s ease; }
+    .card-glass:hover { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.15); transform: translateY(-2px); }
     .link-btn { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 16px; border-radius: 12px; font-size: 0.875rem; font-weight: 600; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1); color: #e2e8f0; text-decoration: none; transition: all 0.2s ease; }
     .link-btn:hover { background: rgba(255, 255, 255, 0.12); transform: translateY(-1px); color: #fff; }
-    .nav-link-year { padding: 8px 16px; border-radius: 10px; font-size: 0.75rem; font-weight: 600; color: #94a3b8; transition: all 0.2s; border: 1px solid transparent; }
-    .nav-link-year:hover { color: #fff; background: rgba(255, 255, 255, 0.05); }
-    .nav-link-year.active { background: rgba(59, 130, 246, 0.1); border-color: rgba(59, 130, 246, 0.3); color: #3b82f6; }
   </style>
 </head>
 
@@ -47,69 +45,78 @@
         <span>Project List</span>
       </div>
       <span class="text-xs bg-white/5 border border-white/10 text-slate-400 px-3 py-1.5 rounded-full font-bold uppercase tracking-wider">
-        5 Projects
+        8 Projects
       </span>
     </h2>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-      <!-- 1. Caleg Yasdar -->
+      <!-- 1. Go Rakamin -->
       <div class="card-glass rounded-2xl p-6 flex flex-col">
         <div class="flex justify-between items-start mb-4">
-          <h3 class="text-lg font-bold text-white">1. Caleg Yasdar</h3>
+          <h3 class="text-lg font-bold text-white">1. Go Rakamin</h3>
           <span class="bg-indigo-500/20 text-indigo-300 text-[10px] px-2 py-1 rounded-full font-bold uppercase tracking-wider">Web Dev</span>
         </div>
-        <div class="text-slate-400 text-sm mb-6 flex-1">
-          <ul class="list-disc list-inside space-y-1">
-            <li>Memposting</li>
-            <li>Test 2</li>
-          </ul>
-        </div>
+        <p class="text-slate-400 text-sm mb-6 flex-1 leading-relaxed">
+          Educational assignment and system implementation in Go language developed under the Rakamin Academy program.
+        </p>
         <div class="pt-4 border-t border-white/5 flex justify-between items-center mt-auto">
-          <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Updated 20 June 2023</span>
-          <a href="https://github.com/mazharrasyad/caleg-yasdar" target="_blank" class="text-blue-400 hover:text-blue-300 text-xs font-bold flex items-center gap-1">
-            Documentation <i class="fas fa-external-link-alt text-[10px]"></i>
-          </a>
+          <div class="flex flex-col">
+            <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Tools</span>
+            <span class="text-xs text-slate-300 font-semibold">Go, Gin, PostgreSQL</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="bg-emerald-500/10 text-emerald-400 text-[10px] px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider">Public</span>
+            <a href="https://github.com/mazharrasyad/go-rakamin" target="_blank" class="text-blue-400 hover:text-blue-300 text-xs font-bold flex items-center gap-1">
+              View Source <i class="fab fa-github"></i>
+            </a>
+          </div>
         </div>
       </div>
 
-      <!-- 2. Microsite Wilayah -->
+      <!-- 2. Go Digitalent -->
       <div class="card-glass rounded-2xl p-6 flex flex-col">
         <div class="flex justify-between items-start mb-4">
-          <h3 class="text-lg font-bold text-white">2. Microsite Wilayah</h3>
+          <h3 class="text-lg font-bold text-white">2. Go Digitalent</h3>
           <span class="bg-indigo-500/20 text-indigo-300 text-[10px] px-2 py-1 rounded-full font-bold uppercase tracking-wider">Web Dev</span>
         </div>
-        <div class="text-slate-400 text-sm mb-6 flex-1">
-          <ul class="list-disc list-inside space-y-1">
-            <li>Test 1</li>
-            <li>Test 2</li>
-          </ul>
-        </div>
+        <p class="text-slate-400 text-sm mb-6 flex-1 leading-relaxed">
+          Go-based projects and practice files created for the Digitalent training program.
+        </p>
         <div class="pt-4 border-t border-white/5 flex justify-between items-center mt-auto">
-          <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Updated 18 Aug 2023</span>
-          <a href="https://github.com/mazharrasyad/selatan.jakarta.go.id.wilayah" target="_blank" class="text-blue-400 hover:text-blue-300 text-xs font-bold flex items-center gap-1">
-            Documentation <i class="fas fa-external-link-alt text-[10px]"></i>
-          </a>
+          <div class="flex flex-col">
+            <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Tools</span>
+            <span class="text-xs text-slate-300 font-semibold">Go, Gin, MySQL</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="bg-emerald-500/10 text-emerald-400 text-[10px] px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider">Public</span>
+            <a href="https://github.com/mazharrasyad/go-digitalent" target="_blank" class="text-blue-400 hover:text-blue-300 text-xs font-bold flex items-center gap-1">
+              View Source <i class="fab fa-github"></i>
+            </a>
+          </div>
         </div>
       </div>
 
-      <!-- 3. Cari Mentor -->
+      <!-- 3. Caleg Yasdar -->
       <div class="card-glass rounded-2xl p-6 flex flex-col">
         <div class="flex justify-between items-start mb-4">
-          <h3 class="text-lg font-bold text-white">3. Cari Mentor</h3>
+          <h3 class="text-lg font-bold text-white">3. Caleg Yasdar</h3>
           <span class="bg-indigo-500/20 text-indigo-300 text-[10px] px-2 py-1 rounded-full font-bold uppercase tracking-wider">Web Dev</span>
         </div>
-        <div class="text-slate-400 text-sm mb-6 flex-1">
-          <ul class="list-disc list-inside space-y-1">
-            <li>Test 1</li>
-            <li>Test 2</li>
-          </ul>
-        </div>
+        <p class="text-slate-400 text-sm mb-6 flex-1 leading-relaxed">
+          Information system designed for managing and monitoring legislative candidates and election volunteer coordination.
+        </p>
         <div class="pt-4 border-t border-white/5 flex justify-between items-center mt-auto">
-          <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Updated 18 Aug 2023</span>
-          <a href="https://github.com/mazharrasyad/selatan.jakarta.go.id.wilayah" target="_blank" class="text-blue-400 hover:text-blue-300 text-xs font-bold flex items-center gap-1">
-            Documentation <i class="fas fa-external-link-alt text-[10px]"></i>
-          </a>
+          <div class="flex flex-col">
+            <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Tools</span>
+            <span class="text-xs text-slate-300 font-semibold">PHP, Laravel, MySQL</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="bg-rose-500/10 text-rose-400 text-[10px] px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider">Private</span>
+            <a href="https://github.com/mazharrasyad/caleg-yasdar" target="_blank" class="text-slate-500 hover:text-slate-400 text-xs font-bold flex items-center gap-1">
+              View Source <i class="fab fa-github"></i>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -119,37 +126,112 @@
           <h3 class="text-lg font-bold text-white">4. CV Bahrullah Akbar</h3>
           <span class="bg-indigo-500/20 text-indigo-300 text-[10px] px-2 py-1 rounded-full font-bold uppercase tracking-wider">Web Dev</span>
         </div>
-        <div class="text-slate-400 text-sm mb-6 flex-1">
-          <ul class="list-disc list-inside space-y-1">
-            <li>Test 1</li>
-            <li>Test 2</li>
-          </ul>
-        </div>
+        <p class="text-slate-400 text-sm mb-6 flex-1 leading-relaxed">
+          Professional personal curriculum vitae website showcasing Bahrullah Akbar's career profile and publications.
+        </p>
         <div class="pt-4 border-t border-white/5 flex justify-between items-center mt-auto">
-          <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Updated 18 Aug 2023</span>
-          <a href="https://github.com/mazharrasyad/selatan.jakarta.go.id.wilayah" target="_blank" class="text-blue-400 hover:text-blue-300 text-xs font-bold flex items-center gap-1">
-            Documentation <i class="fas fa-external-link-alt text-[10px]"></i>
-          </a>
+          <div class="flex flex-col">
+            <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Tools</span>
+            <span class="text-xs text-slate-300 font-semibold">HTML, CSS, JavaScript</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="bg-rose-500/10 text-rose-400 text-[10px] px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider">Private</span>
+            <a href="https://github.com/mazharrasyad/cv-bahrullah-akbar" target="_blank" class="text-slate-500 hover:text-slate-400 text-xs font-bold flex items-center gap-1">
+              View Source <i class="fab fa-github"></i>
+            </a>
+          </div>
         </div>
       </div>
 
-      <!-- 5. Pendaftaran PJLP -->
+      <!-- 5. Horison Ultima Bandung -->
       <div class="card-glass rounded-2xl p-6 flex flex-col">
         <div class="flex justify-between items-start mb-4">
-          <h3 class="text-lg font-bold text-white">5. Pendaftaran PJLP</h3>
+          <h3 class="text-lg font-bold text-white">5. Horison Ultima Bandung</h3>
           <span class="bg-indigo-500/20 text-indigo-300 text-[10px] px-2 py-1 rounded-full font-bold uppercase tracking-wider">Web Dev</span>
         </div>
-        <div class="text-slate-400 text-sm mb-6 flex-1">
-          <ul class="list-disc list-inside space-y-1">
-            <li>Test 1</li>
-            <li>Test 2</li>
-          </ul>
-        </div>
+        <p class="text-slate-400 text-sm mb-6 flex-1 leading-relaxed">
+          Official hotel website for Horison Ultima Bandung, featuring room booking information, banquet facilities, and services.
+        </p>
         <div class="pt-4 border-t border-white/5 flex justify-between items-center mt-auto">
-          <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Updated 18 Aug 2023</span>
-          <a href="https://github.com/mazharrasyad/selatan.jakarta.go.id.wilayah" target="_blank" class="text-blue-400 hover:text-blue-300 text-xs font-bold flex items-center gap-1">
-            Documentation <i class="fas fa-external-link-alt text-[10px]"></i>
-          </a>
+          <div class="flex flex-col">
+            <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Tools</span>
+            <span class="text-xs text-slate-300 font-semibold">WordPress, Elementor, PHP</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="bg-rose-500/10 text-rose-400 text-[10px] px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider">Private</span>
+            <a href="https://www.horisonultimabandung.com/" target="_blank" class="text-slate-500 hover:text-slate-400 text-xs font-bold flex items-center gap-1">
+              View Website <i class="fas fa-external-link-alt text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Recerva -->
+      <div class="card-glass rounded-2xl p-6 flex flex-col">
+        <div class="flex justify-between items-start mb-4">
+          <h3 class="text-lg font-bold text-white">6. Recerva</h3>
+          <span class="bg-indigo-500/20 text-indigo-300 text-[10px] px-2 py-1 rounded-full font-bold uppercase tracking-wider">Web Dev</span>
+        </div>
+        <p class="text-slate-400 text-sm mb-6 flex-1 leading-relaxed">
+          Comprehensive hotel property management and booking engine platform supporting multiple tenant hotel schemas.
+        </p>
+        <div class="pt-4 border-t border-white/5 flex justify-between items-center mt-auto">
+          <div class="flex flex-col">
+            <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Tools</span>
+            <span class="text-xs text-slate-300 font-semibold">Laravel, Vue.js, Tailwind CSS</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="bg-emerald-500/10 text-emerald-400 text-[10px] px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider">Public</span>
+            <a href="https://tripasysfo.com/recerva" target="_blank" class="text-blue-400 hover:text-blue-300 text-xs font-bold flex items-center gap-1">
+              View Website <i class="fas fa-external-link-alt text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. AOC (Internal) -->
+      <div class="card-glass rounded-2xl p-6 flex flex-col">
+        <div class="flex justify-between items-start mb-4">
+          <h3 class="text-lg font-bold text-white">7. AOC (Internal)</h3>
+          <span class="bg-rose-500/20 text-rose-300 text-[10px] px-2 py-1 rounded-full font-bold uppercase tracking-wider">Web Dev</span>
+        </div>
+        <p class="text-slate-400 text-sm mb-6 flex-1 leading-relaxed">
+          Administrative Operations Center (AOC) backend platform for managing Recerva hotel instances, payments, and reporting.
+        </p>
+        <div class="pt-4 border-t border-white/5 flex justify-between items-center mt-auto">
+          <div class="flex flex-col">
+            <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Tools</span>
+            <span class="text-xs text-slate-300 font-semibold">Laravel, Vue.js, Tailwind CSS</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="bg-rose-500/10 text-rose-400 text-[10px] px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider">Private</span>
+            <a href="https://tripasysfo.com/aoc" target="_blank" class="text-slate-500 hover:text-slate-400 text-xs font-bold flex items-center gap-1">
+              View Website <i class="fas fa-external-link-alt text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. Proxima -->
+      <div class="card-glass rounded-2xl p-6 flex flex-col">
+        <div class="flex justify-between items-start mb-4">
+          <h3 class="text-lg font-bold text-white">8. Proxima</h3>
+          <span class="bg-indigo-500/20 text-indigo-300 text-[10px] px-2 py-1 rounded-full font-bold uppercase tracking-wider">Web Dev</span>
+        </div>
+        <p class="text-slate-400 text-sm mb-6 flex-1 leading-relaxed">
+          Unified service management and administrative tool developed for hotel system integration.
+        </p>
+        <div class="pt-4 border-t border-white/5 flex justify-between items-center mt-auto">
+          <div class="flex flex-col">
+            <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Tools</span>
+            <span class="text-xs text-slate-300 font-semibold">Laravel, Tailwind CSS, API</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="bg-emerald-500/10 text-emerald-400 text-[10px] px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider">Public</span>
+            <a href="https://tripasysfo.com/proxima" target="_blank" class="text-blue-400 hover:text-blue-300 text-xs font-bold flex items-center gap-1">
+              View Website <i class="fas fa-external-link-alt text-[10px]"></i>
+            </a>
+          </div>
         </div>
       </div>
 

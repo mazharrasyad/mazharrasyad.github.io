@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -23,12 +23,10 @@
   <style>
     body { font-family: 'Inter', sans-serif; }
     .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%); }
-    .card-glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
+    .card-glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.3s ease; }
+    .card-glass:hover { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.15); transform: translateY(-2px); }
     .link-btn { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 16px; border-radius: 12px; font-size: 0.875rem; font-weight: 600; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1); color: #e2e8f0; text-decoration: none; transition: all 0.2s ease; }
     .link-btn:hover { background: rgba(255, 255, 255, 0.12); transform: translateY(-1px); color: #fff; }
-    .nav-link-year { padding: 8px 16px; border-radius: 10px; font-size: 0.75rem; font-weight: 600; color: #94a3b8; transition: all 0.2s; border: 1px solid transparent; }
-    .nav-link-year:hover { color: #fff; background: rgba(255, 255, 255, 0.05); }
-    .nav-link-year.active { background: rgba(59, 130, 246, 0.1); border-color: rgba(59, 130, 246, 0.3); color: #3b82f6; }
   </style>
 </head>
 
@@ -47,30 +45,101 @@
         <span>Project List</span>
       </div>
       <span class="text-xs bg-white/5 border border-white/10 text-slate-400 px-3 py-1.5 rounded-full font-bold uppercase tracking-wider">
-        1 Project
+        4 Projects
       </span>
     </h2>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-      <!-- 1. Portfolio Refactor -->
+      <!-- 1. Betawi Academia -->
       <div class="card-glass rounded-2xl p-6 flex flex-col">
         <div class="flex justify-between items-start mb-4">
-          <h3 class="text-lg font-bold text-white">1. Portfolio Refactor</h3>
+          <h3 class="text-lg font-bold text-white">1. Betawi Academia</h3>
           <span class="bg-indigo-500/20 text-indigo-300 text-[10px] px-2 py-1 rounded-full font-bold uppercase tracking-wider">Web Dev</span>
         </div>
-        <div class="text-slate-400 text-sm mb-6 flex-1">
-          <ul class="list-disc list-inside space-y-1">
-            <li>Refactoring to English</li>
-            <li>Focusing on Projects</li>
-            <li>Migrating to Tailwind CSS</li>
-          </ul>
-        </div>
+        <p class="text-slate-400 text-sm mb-6 flex-1 leading-relaxed">
+          Educational resource repository and community learning network dedicated to Betawi culture studies.
+        </p>
         <div class="pt-4 border-t border-white/5 flex justify-between items-center mt-auto">
-          <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Updated May 2026</span>
-          <a href="https://github.com/mazharrasyad" target="_blank" class="text-blue-400 hover:text-blue-300 text-xs font-bold flex items-center gap-1">
-            Documentation <i class="fas fa-external-link-alt text-[10px]"></i>
-          </a>
+          <div class="flex flex-col">
+            <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Tools</span>
+            <span class="text-xs text-slate-300 font-semibold">Laravel, Tailwind CSS, MySQL</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="bg-rose-500/10 text-rose-400 text-[10px] px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider">Private</span>
+            <a href="https://github.com/herakarmila19/betawi_academia" target="_blank" class="text-slate-500 hover:text-slate-400 text-xs font-bold flex items-center gap-1">
+              View Source <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Sudinsos Portal -->
+      <div class="card-glass rounded-2xl p-6 flex flex-col">
+        <div class="flex justify-between items-start mb-4">
+          <h3 class="text-lg font-bold text-white">2. Sudinsos Portal</h3>
+          <span class="bg-indigo-500/20 text-indigo-300 text-[10px] px-2 py-1 rounded-full font-bold uppercase tracking-wider">Web Dev</span>
+        </div>
+        <p class="text-slate-400 text-sm mb-6 flex-1 leading-relaxed">
+          Public social affairs and relief request portal for the South Jakarta Social Sub-department.
+        </p>
+        <div class="pt-4 border-t border-white/5 flex justify-between items-center mt-auto">
+          <div class="flex flex-col">
+            <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Tools</span>
+            <span class="text-xs text-slate-300 font-semibold">Laravel, Livewire, Tailwind CSS</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="bg-rose-500/10 text-rose-400 text-[10px] px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider">Private</span>
+            <a href="https://github.com/herakarmila19/sudinsos" target="_blank" class="text-slate-500 hover:text-slate-400 text-xs font-bold flex items-center gap-1">
+              View Source <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Blockchain Benchmark Raft HLF -->
+      <div class="card-glass rounded-2xl p-6 flex flex-col">
+        <div class="flex justify-between items-start mb-4">
+          <h3 class="text-lg font-bold text-white">3. Blockchain Benchmark Raft HLF</h3>
+          <span class="bg-violet-500/20 text-violet-300 text-[10px] px-2 py-1 rounded-full font-bold uppercase tracking-wider">Blockchain</span>
+        </div>
+        <p class="text-slate-400 text-sm mb-6 flex-1 leading-relaxed">
+          Performance benchmarking suites analyzing transaction throughput and latency on Raft-based Hyperledger Fabric networks.
+        </p>
+        <div class="pt-4 border-t border-white/5 flex justify-between items-center mt-auto">
+          <div class="flex flex-col">
+            <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Tools</span>
+            <span class="text-xs text-slate-300 font-semibold">Go, Raft, Hyperledger Fabric, Caliper</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="bg-emerald-500/10 text-emerald-400 text-[10px] px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider">Public</span>
+            <a href="https://github.com/mazharrasyad/blockchain-benchmark-raft-hlf" target="_blank" class="text-blue-400 hover:text-blue-300 text-xs font-bold flex items-center gap-1">
+              View Source <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Putra Jasa V2 -->
+      <div class="card-glass rounded-2xl p-6 flex flex-col">
+        <div class="flex justify-between items-start mb-4">
+          <h3 class="text-lg font-bold text-white">4. Putra Jasa V2</h3>
+          <span class="bg-indigo-500/20 text-indigo-300 text-[10px] px-2 py-1 rounded-full font-bold uppercase tracking-wider">Web Dev</span>
+        </div>
+        <p class="text-slate-400 text-sm mb-6 flex-1 leading-relaxed">
+          Updated vehicle rental and transport service management system with booking automation and pricing calculators.
+        </p>
+        <div class="pt-4 border-t border-white/5 flex justify-between items-center mt-auto">
+          <div class="flex flex-col">
+            <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Tools</span>
+            <span class="text-xs text-slate-300 font-semibold">PHP, Laravel, Bootstrap</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="bg-rose-500/10 text-rose-400 text-[10px] px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider">Private</span>
+            <a href="https://github.com/febrianmosii/putrajasa-v2" target="_blank" class="text-slate-500 hover:text-slate-400 text-xs font-bold flex items-center gap-1">
+              View Source <i class="fab fa-github"></i>
+            </a>
+          </div>
         </div>
       </div>
 
