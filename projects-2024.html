@@ -9,6 +9,13 @@
   <link rel="shortcut icon" href="logo/AzharLogoFlag.png" type="image/x-icon">
   <link rel="icon" href="logo/AzharLogoFlag.png" type="image/x-icon">
 
+  <script>
+    const tailwindWarn = console.warn;
+    console.warn = function(...args) {
+      if (args[0] && typeof args[0] === 'string' && args[0].includes('cdn.tailwindcss.com')) return;
+      tailwindWarn.apply(console, args);
+    };
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -17,7 +24,7 @@
     body { font-family: 'Inter', sans-serif; }
     .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%); }
     .card-glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
-    .link-btn { display: flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 12px; font-size: 0.875rem; font-weight: 600; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1); color: #e2e8f0; text-decoration: none; transition: all 0.2s ease; }
+    .link-btn { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 16px; border-radius: 12px; font-size: 0.875rem; font-weight: 600; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1); color: #e2e8f0; text-decoration: none; transition: all 0.2s ease; }
     .link-btn:hover { background: rgba(255, 255, 255, 0.12); transform: translateY(-1px); color: #fff; }
     .nav-link-year { padding: 8px 16px; border-radius: 10px; font-size: 0.75rem; font-weight: 600; color: #94a3b8; transition: all 0.2s; border: 1px solid transparent; }
     .nav-link-year:hover { color: #fff; background: rgba(255, 255, 255, 0.05); }
@@ -27,29 +34,24 @@
 
 <body class="gradient-bg min-h-screen text-white flex flex-col p-4 md:p-8">
 
-  <header class="max-w-5xl mx-auto w-full mb-8 flex flex-col md:flex-row justify-between items-center gap-4">
+  <header class="max-w-5xl mx-auto w-full mb-8 flex justify-between items-center">
     <a href="index.html" class="link-btn">
       <i class="fas fa-arrow-left"></i> <span>Projects</span>
     </a>
-    <nav class="flex flex-wrap justify-center gap-1 bg-white/5 p-1 rounded-xl border border-white/10">
-      <a href="projects-2026.html" class="nav-link-year">2026</a><a href="projects-2025.html" class="nav-link-year">2025</a>
-      <a href="projects-2024.html" class="nav-link-year active">2024</a>
-      <a href="projects-2023.html" class="nav-link-year">2023</a>
-      <a href="projects-2022.html" class="nav-link-year">2022</a>
-      <a href="projects-2021.html" class="nav-link-year">2021</a>
-      <a href="projects-2020.html" class="nav-link-year">2020</a>
-      <a href="projects-2019.html" class="nav-link-year">2019</a>
-      <a href="projects-2018.html" class="nav-link-year">2018</a>
-    </nav>
   </header>
 
   <main class="max-w-5xl mx-auto w-full flex-1">
-    <h2 class="text-xl font-bold mb-8 flex items-center gap-3">
-      <span class="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 text-sm">2024</span>
-      Project List 2024
+    <h2 class="text-xl font-bold mb-8 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <span class="px-3 py-1 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 text-sm font-bold">2024</span>
+        <span>Project List</span>
+      </div>
+      <span class="text-xs bg-white/5 border border-white/10 text-slate-400 px-3 py-1.5 rounded-full font-bold uppercase tracking-wider">
+        4 Projects
+      </span>
     </h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
       <!-- 1. e-Kinerja PJLP -->
       <div class="card-glass rounded-2xl p-6 flex flex-col">
