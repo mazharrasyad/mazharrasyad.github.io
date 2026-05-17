@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Muhammad Azhar Rasyad - Software Engineer</title>
 
-  <link rel="shortcut icon" href="dist/img/AzharLogoFlag.png" type="image/x-icon">
-  <link rel="icon" href="dist/img/AzharLogoFlag.png" type="image/x-icon">
+  <link rel="shortcut icon" href="logo/AzharLogoFlag.png" type="image/x-icon">
+  <link rel="icon" href="logo/AzharLogoFlag.png" type="image/x-icon">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <style>
     body { font-family: 'Inter', sans-serif; }
@@ -33,16 +33,15 @@
       justify-content: center;
       gap: 10px;
       width: 100%;
-      padding: 14px 20px;
+      padding: 12px 16px;
       border-radius: 14px;
-      font-size: 0.95rem;
+      font-size: 0.875rem;
       font-weight: 600;
       background: rgba(255, 255, 255, 0.06);
       border: 1px solid rgba(255, 255, 255, 0.1);
       color: #e2e8f0;
       text-decoration: none;
       transition: all 0.2s ease;
-      text-align: center;
     }
 
     .link-btn:hover {
@@ -52,17 +51,18 @@
       color: #fff;
     }
 
-    .link-btn .icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1rem;
-      flex-shrink: 0;
+    .year-link {
+      transition: all 0.2s ease;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
+    .year-link:hover {
+      background: rgba(59, 130, 246, 0.15);
+      border-color: rgba(59, 130, 246, 0.4);
+      color: #60a5fa;
+      transform: translateY(-2px);
+    }
 
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: #0f172a; }
@@ -74,97 +74,101 @@
 
   <!-- Main centered content -->
   <main class="flex-1 flex items-center justify-center px-4 py-12">
-    <div class="w-full max-w-2xl">
+    <div class="w-full max-w-xl">
 
       <!-- Profile Card -->
       <div class="card-glass rounded-3xl p-8">
 
-        <!-- Profile Header (centered) -->
+        <!-- Profile Header -->
         <div class="flex flex-col items-center text-center mb-8">
-          <div class="relative mb-4">
-            <div class="w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 p-[3px] shadow-2xl shadow-blue-500/30">
-              <img src="dist/img/AzharLogo.png" alt="Muhammad Azhar Rasyad"
+          <div class="relative mb-6">
+            <div class="w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 p-[3px] shadow-2xl shadow-blue-500/30">
+              <img src="logo/AzharLogo.png" alt="Muhammad Azhar Rasyad"
                 class="w-full h-full rounded-full object-cover bg-slate-800"
-                onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'width:100%;height:100%;border-radius:9999px;background:#334155;display:flex;align-items:center;justify-content:center;\'><span style=\'font-size:1.5rem;font-weight:700;color:#60a5fa;\'>AR</span></div>'">
+                onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'width:100%;height:100%;border-radius:9999px;background:#334155;display:flex;align-items:center;justify-content:center;\'><span style=\'font-size:2rem;font-weight:700;color:#60a5fa;\'>AR</span></div>'">
             </div>
-            <span class="absolute bottom-0.5 right-0.5 w-4 h-4 bg-green-400 border-2 border-slate-900 rounded-full"></span>
+            <span class="absolute bottom-1 right-1 w-5 h-5 bg-green-400 border-4 border-slate-900 rounded-full"></span>
           </div>
-          <h1 class="text-2xl font-extrabold mb-1 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+          
+          <h1 class="text-3xl font-black mb-2 bg-gradient-to-r from-white via-white to-blue-200 bg-clip-text text-transparent">
             Muhammad Azhar Rasyad
           </h1>
-          <p class="text-slate-400 text-sm font-medium mb-1">Software Engineer · Web Developer</p>
-          <p class="text-slate-500 text-xs flex items-center gap-1">
-            <i class="fas fa-map-marker-alt text-blue-400"></i>
-            Cilandak, Jakarta Selatan
+          
+          <div class="flex flex-col items-center gap-2 mb-4">
+            <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-xs font-bold uppercase tracking-widest">
+              Software Engineer
+            </span>
+            <p class="text-slate-400 text-sm font-medium">
+              4+ Years Professional Experience <span class="text-slate-600 mx-1">|</span> 2022 - Present
+            </p>
+          </div>
+
+          <p class="text-slate-500 text-xs flex items-center gap-1 mb-6">
+            <i class="fas fa-map-marker-alt text-blue-500/70"></i>
+            Jakarta, Indonesia
           </p>
-        </div>
 
-        <!-- Divider -->
-        <div class="w-full h-px bg-white/10 mb-8"></div>
-
-        <!-- Radar Chart: full width -->
-        <div class="flex flex-col items-center mb-8">
-          <p class="text-xs text-slate-500 uppercase tracking-widest mb-4">Statistik Keahlian</p>
-          <div style="width:100%; max-width:360px; aspect-ratio:1;">
-            <canvas id="radarChart"></canvas>
-          </div>
-        </div>
-
-        <!-- Divider -->
-        <div class="w-full h-px bg-white/10 mb-6"></div>
-
-        <!-- Portfolio Links -->
-        <div class="mb-8">
-          <p class="text-xs text-slate-500 uppercase tracking-widest mb-4 text-center">Eksplorasi Portfolio</p>
-          <div class="grid grid-cols-2 gap-3">
-            <a href="pendidikan.html" class="link-btn">
-              <span class="icon bg-blue-500/20"><i class="fas fa-user-graduate text-blue-400"></i></span>
-              <span class="text-sm">Pendidikan</span>
+          <!-- Social Links (Merged) -->
+          <div class="flex justify-center gap-4">
+            <a href="https://www.linkedin.com/in/mazharrasyad" target="_blank" class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 hover:bg-blue-500/20 hover:scale-110 transition-all border border-blue-500/20" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="pelatihan.html" class="link-btn">
-              <span class="icon bg-emerald-500/20"><i class="fas fa-book text-emerald-400"></i></span>
-              <span class="text-sm">Pelatihan</span>
+            <a href="https://github.com/mazharrasyad" target="_blank" class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-slate-300 hover:bg-white/10 hover:scale-110 transition-all border border-white/10" title="GitHub">
+              <i class="fab fa-github"></i>
             </a>
-            <a href="pengalaman.html" class="link-btn">
-              <span class="icon bg-amber-500/20"><i class="fas fa-file-contract text-amber-400"></i></span>
-              <span class="text-sm">Pengalaman</span>
-            </a>
-            <a href="proyek.html" class="link-btn">
-              <span class="icon bg-indigo-500/20"><i class="fas fa-briefcase text-indigo-400"></i></span>
-              <span class="text-sm">Proyek</span>
+            <a href="http://wa.me/+6281290351971" target="_blank" class="w-10 h-10 rounded-xl bg-green-500/10 flex items-center justify-center text-green-400 hover:bg-green-500/20 hover:scale-110 transition-all border border-green-500/20" title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
             </a>
           </div>
         </div>
 
-        <!-- Divider -->
-        <div class="w-full h-px bg-white/10 mb-6"></div>
 
-        <!-- Links: 1 row, 3 equal columns -->
-        <div>
-          <p class="text-xs text-slate-500 uppercase tracking-widest mb-4 text-center">Hubungi Saya</p>
-          <div class="flex gap-3">
-            <a href="https://www.linkedin.com/in/mazharrasyad" target="_blank" class="link-btn flex-1 flex-col py-4 gap-2">
-              <span class="icon" style="background: rgba(10,102,194,0.25); margin: 0 auto;">
-                <i class="fab fa-linkedin-in" style="color: #60a5fa;"></i>
-              </span>
-              <span class="text-sm">LinkedIn</span>
+
+        <!-- Projects Section -->
+        <div class="mb-10">
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-sm font-bold text-slate-400 uppercase tracking-widest">Projects</h2>
+          </div>
+
+          <!-- Project Stats Chart (Compact) -->
+          <div class="mb-4 h-20 opacity-50 hover:opacity-100 transition-opacity">
+            <canvas id="projectsChart"></canvas>
+          </div>
+
+
+          
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <a href="projects-2026.html" class="year-link p-4 rounded-xl text-center">
+              <span class="text-lg font-bold">2026</span>
             </a>
-
-            <a href="https://github.com/mazharrasyad" target="_blank" class="link-btn flex-1 flex-col py-4 gap-2">
-              <span class="icon" style="background: rgba(255,255,255,0.08); margin: 0 auto;">
-                <i class="fab fa-github" style="color: #e2e8f0;"></i>
-              </span>
-              <span class="text-sm">GitHub</span>
+            <a href="projects-2025.html" class="year-link p-4 rounded-xl text-center">
+              <span class="text-lg font-bold">2025</span>
             </a>
-
-            <a href="http://wa.me/+6281290351971" target="_blank" class="link-btn flex-1 flex-col py-4 gap-2">
-              <span class="icon" style="background: rgba(34,197,94,0.18); margin: 0 auto;">
-                <i class="fab fa-whatsapp" style="color: #4ade80;"></i>
-              </span>
-              <span class="text-sm">WhatsApp</span>
+            <a href="projects-2024.html" class="year-link p-4 rounded-xl text-center">
+              <span class="text-lg font-bold">2024</span>
+            </a>
+            <a href="projects-2023.html" class="year-link p-4 rounded-xl text-center">
+              <span class="text-lg font-bold">2023</span>
+            </a>
+            <a href="projects-2022.html" class="year-link p-4 rounded-xl text-center">
+              <span class="text-lg font-bold">2022</span>
+            </a>
+            <a href="projects-2021.html" class="year-link p-4 rounded-xl text-center">
+              <span class="text-lg font-bold">2021</span>
+            </a>
+            <a href="projects-2020.html" class="year-link p-4 rounded-xl text-center">
+              <span class="text-lg font-bold">2020</span>
+            </a>
+            <a href="projects-2019.html" class="year-link p-4 rounded-xl text-center">
+              <span class="text-lg font-bold">2019</span>
+            </a>
+            <a href="projects-2018.html" class="year-link p-4 rounded-xl text-center">
+              <span class="text-lg font-bold">2018</span>
             </a>
           </div>
         </div>
+
+
 
       </div>
 
@@ -172,81 +176,36 @@
   </main>
 
   <!-- Footer -->
-  <footer class="text-center py-5">
-    <p class="text-slate-600 text-xs">&copy; 2026 Muhammad Azhar Rasyad</p>
+  <footer class="text-center py-8">
+    <p class="text-slate-600 text-[10px] font-bold uppercase tracking-[0.2em]">&copy; 2026 Muhammad Azhar Rasyad</p>
   </footer>
 
+
   <script>
-    const ctx = document.getElementById('radarChart').getContext('2d');
-
-    const gradientFill = ctx.createLinearGradient(0, 0, 0, 260);
-    gradientFill.addColorStop(0, 'rgba(99, 179, 255, 0.55)');
-    gradientFill.addColorStop(1, 'rgba(139, 92, 246, 0.35)');
-
+    const ctx = document.getElementById('projectsChart').getContext('2d');
     new Chart(ctx, {
-      type: 'radar',
+      type: 'bar',
       data: {
-        labels: ['Web Dev', 'Data', 'Programming', 'Android Dev', 'UI/UX', 'Soft Skill', 'Cloud'],
+        labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026'],
         datasets: [{
-          data: [37.3, 20.9, 18.2, 10.9, 6.4, 3.6, 2.7],
-          fill: true,
-          backgroundColor: gradientFill,
-          borderColor: 'rgba(147, 197, 253, 1)',
-          borderWidth: 2.5,
-          pointBackgroundColor: 'rgba(147, 197, 253, 1)',
-          pointBorderColor: '#1e293b',
-          pointBorderWidth: 2,
-          pointRadius: 5,
-          pointHoverRadius: 7,
-          pointHoverBackgroundColor: '#fff',
-          pointHoverBorderColor: 'rgba(147, 197, 253, 1)',
+          data: [7, 19, 8, 12, 18, 5, 4, 3, 1],
+          backgroundColor: 'rgba(59, 130, 246, 0.4)',
+          borderRadius: 4,
+          hoverBackgroundColor: 'rgba(59, 130, 246, 0.8)'
         }]
       },
       options: {
-        responsive: true,
-        maintainAspectRatio: true,
-        scales: {
-          r: {
-            min: 0,
-            max: 40,
-            ticks: {
-              stepSize: 10,
-              color: 'rgba(148,163,184,0.7)',
-              backdropColor: 'transparent',
-              font: { size: 9 },
-              showLabelBackdrop: false,
-            },
-            grid: {
-              color: 'rgba(255,255,255,0.12)',
-              lineWidth: 1,
-            },
-            angleLines: {
-              color: 'rgba(255,255,255,0.15)',
-              lineWidth: 1,
-            },
-            pointLabels: {
-              color: '#cbd5e1',
-              font: { size: 11, weight: '600' },
-            }
-          }
-        },
+        maintainAspectRatio: false,
         plugins: {
           legend: { display: false },
-          tooltip: {
-            backgroundColor: 'rgba(15,23,42,0.9)',
-            titleColor: '#93c5fd',
-            bodyColor: '#e2e8f0',
-            borderColor: 'rgba(99,179,255,0.3)',
-            borderWidth: 1,
-            padding: 10,
-            callbacks: {
-              label: (item) => ` ${item.raw}%`
-            }
-          }
+          tooltip: { enabled: true }
+        },
+        scales: {
+          y: { display: false },
+          x: { display: false }
         }
       }
     });
   </script>
-
 </body>
 </html>

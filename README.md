@@ -10,14 +10,14 @@ This repository contains the source code for my personal portfolio website and d
 
 ## 📁 Project Timeline
 You can explore my projects organized by year:
-- [**2025 Projects**](proyek-2025.html) — Current focus and advanced implementations.
-- [**2024 Projects**](proyek-2024.html) — Modern web solutions and complex systems.
-- [**2023 Projects**](proyek-2023.html) — Full-stack developments and API integrations.
-- [**2022 Projects**](proyek-2022.html) — Scalable applications and UI/UX refinements.
-- [**2021 Projects**](proyek-2021.html) — Performance optimization and cloud deployments.
-- [**2020 Projects**](proyek-2020.html) — Responsive design and interactive interfaces.
-- [**2019 Projects**](proyek-2019.html) — Backend logic and database management.
-- [**2018 Projects**](proyek-2018.html) — The foundation: Early web experiments and logic building.
+- [**2025 Projects**](projects-2025.html) — Current focus and advanced implementations.
+- [**2024 Projects**](projects-2024.html) — Modern web solutions and complex systems.
+- [**2023 Projects**](projects-2023.html) — Full-stack developments and API integrations.
+- [**2022 Projects**](projects-2022.html) — Scalable applications and UI/UX refinements.
+- [**2021 Projects**](projects-2021.html) — Performance optimization and cloud deployments.
+- [**2020 Projects**](projects-2020.html) — Responsive design and interactive interfaces.
+- [**2019 Projects**](projects-2019.html) — Backend logic and database management.
+- [**2018 Projects**](projects-2018.html) — The foundation: Early web experiments and logic building.
 
 ## 🛠 Tech Stack & Skills
 Based on my development history, I specialize in:
